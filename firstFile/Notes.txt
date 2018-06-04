@@ -1,0 +1,2 @@
+Notes:
+index.html/index.php are default in apache config and will open automatically but other files will not

@@ -106,6 +106,48 @@ NOTES:
 		die(); and exit(); do same thing - kill rest of code - goes over them
 		we can print with the functions by doing die('error') OR exit('error')
 		we do this because
+			|Ex| mysql_connect('localhost','root','') or exit('Could not connect to database')
+				 echo 'Connected!'
+			this will display connected! if connection successful or exits if not
+			
+	-expression matching:
+		preg_match
+		
+		$string = 'This is a string.'
+		if (preg_match('/is/', $string) ){
+			echo 'Match Found';
+		}else {
+			echo 'No match found';
+		}
+		NOTE: 
+			The solution (which other answers don't mention—at least at the time of my originally 
+			writing this) is that when PHP refers to delimiters, it's not referring to the delimiters you 
+			see in your code (which are quote marks) but the next characters inside the string. 
+			(In fact I've never seen this stated anywhere in any documentation: you have to see it in examples.) 
+			So instead of having a regular expression syntax like what you may be accustomed to from many other 
+			languages:
+			/something/
+			PHP uses strings, and then looks inside the string for another delimiter:
+			'/something/'
+			The delimiter PHP is referring to is the pair of / characters, instead of the pair of ' characters. 
+			So if you write 'something', PHP will take s as the intended delimiter and complain that you're not 
+			allowed to use alphanumeric characters as your delimiter.
+			
+			So if you want to pass (for instance) an i to show that you want a case-insensitve match, you pass 
+			it inside the string but outside of the regex delimiters:
+			'/something/i'
+			If you want to use something other than / as your delimiter, you can, such as if you're matching a 
+			URL and don't want to have to escape all the slashes:
+			'~something~'
+		
+	-functions:
+		function functionName(argument1, argument2){
+			something;
+		}
+		
+		
+	
+	-	
 */ 
 ?>
 

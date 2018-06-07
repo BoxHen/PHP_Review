@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <header id="main-header">
+      <div class="container">
+        <h1>PHP Basics</h1>
+      </div>
+    </header>
+
+      <nav id="navbar">
+        <div class="container">
+          <ul>
+            <li> <a href="#">Home</a> </li>
+            <li> <a href="#">About</a> </li>
+            <li> <a href="#">Services</a> </li>
+            <li> <a href="#">Contact</a> </li>
+          </ul>
+        </div>
+      </nav>
+
+      <section id="showcase">
+        <div class="container">
+          <h1>Notes</h1>
+        </div>
+      </section>
+
+      <div class="container">
+        <section id="main">
+          <h1>Welcome</h1>
+          <p>
+            <ul>
+              <li>
+                -"$": <br>
+  		            used to signify variable <br>
+  		            can start with underscore or letter or number
+              </li>
+
+              <li>
+                -echo: <br>
+              		is a language contruct that allows you to print to screen
+              		can use single or double quotes
+
+              		"" for echo-ing variables (slower)
+              		In double quoted strings other escape sequences are interpreted as well any variable will be
+              		replaced by their value.
+
+              		'' easiest way to sepecify a stringThis method in used when we want to the string to be exactly
+              		as it is written. When string is specified in single quotes PHP will not evaluate it or interpret
+              		escape characters except single quote with backslash (‘) and backslash(\) which has to be escaped.
+
+              		we can use tags like this in echo &ltstrong&gt &lt/strong&gt
+              </li>
+
+              <li>
+                -print: <br>
+                  older way to print data to screen/browser
+                  and slower and more characters to type
+              </li>
+
+              <li>
+                -html tags in echo/print: <br>
+              		we will get error with semi colon since it will think:
+              		echo "&ltinput type = "text" name = "name"&gt";
+              		the "" on type = "text" ends the quotations
+              		FIX: use type = 'text' inside, use echo '', or escape charaters \" (preferable to use 2nd or last)
+              </li>
+
+              <li>
+                -comments: <br>
+                  use // or /(star)(star)/
+              </li>
+
+              <li>
+                -in error reporting: <br>
+              		if no errors appear but something is wrong check in php.ini file and make sure error_reporting
+              		is not set to 0 also turn error_reporting off when done with coding so viewers dont see errors
+              		if page doesnt load
+              		for security reasons we turn error_reporting to 0 <br>
+
+              		we can change it dynamically in code with "error_reporting('E_ALL');"
+              </li>
+
+              <li>
+                -concatenation: <br>
+              		We concat with the dot "." <br>
+              		|ex| $day = 'Saturday'; $date = 4; $year = 2018; <br>
+              			 echo 'The date is '.$day.' '.$date.' '.$year; <br>
+              								OR <br>
+              			 echo "The date is $day $date $year"; <br>
+              		with "" we don't need the dot <br>
+              		'' is faster and with complex code '' may be better
+              </li>
+
+              <li>
+                -if statements <br>
+		              same concept as other language
+              </li>
+
+              <li>
+                -assignment operator: <br>
+              		+=, -=, etc exist in php
+              		.= is a concat
+              </li>
+
+              <li>
+                -comparison operator <br>
+              		!=, ==, <, >, <=, >=
+              		<> is same as !=
+              </li>
+
+              <li>
+                - arithmetic operators: <br>
+		                 same concept as other lang (+, -, /, *, %)
+              </li>
+
+              <li>
+                -Logical operator: <br>
+              		&& or AND
+              		|| or OR
+              </li>
+
+              <li>
+                -Triple equals: same as == but compares data type as well
+              </li>
+
+              <li>
+                -while loop: same as other lang <br>
+		                while(){}
+              </li>
+
+              <li>
+                -do while loop: <br>
+              		do{ <br>
+              			//executes this first and at least once <br>
+              		}while()
+              </li>
+
+              <li>
+                -for loop: same as other lang <br>
+		                 for(i = 0; i <= 10; i++){}
+              </li>
+
+              <li>
+                -switch statement: <br>
+              		switch(case){ <br>
+              			case 1:<br>
+              				something;<br>
+              				break;<br>
+              			case 2:<br>
+              				something;<br>
+              				break;<br>
+              			default:<br>
+              		}
+              </li>
+
+              <li>
+                -die and exit functions: <br>
+              		die(); and exit(); do same thing - kill rest of code - goes over them
+              		we can print with the functions by doing die('error') OR exit('error')
+              		we do this because
+              			|Ex| mysql_connect('localhost','root','') or exit('Could not connect to database')
+              				 echo 'Connected!'
+              			this will display connected! if connection successful or exits if not
+              </li>
+
+              <li>
+                -expression matching: <br>
+                  preg_match
+
+                  $string = 'This is a string.'
+                  if (preg_match('/is/', $string) ){
+                    echo 'Match Found';
+                  }else {
+                    echo 'No match found';
+                  }
+                  NOTE:
+                    The solution (which other answers don't mention—at least at the time of my originally
+                    writing this) is that when PHP refers to delimiters, it's not referring to the delimiters you
+                    see in your code (which are quote marks) but the next characters inside the string.
+                    (In fact I've never seen this stated anywhere in any documentation: you have to see it in examples.)
+                    So instead of having a regular expression syntax like what you may be accustomed to from many other
+                    languages:
+                    /something/
+                    PHP uses strings, and then looks inside the string for another delimiter:
+                    '/something/'
+                    The delimiter PHP is referring to is the pair of / characters, instead of the pair of ' characters.
+                    So if you write 'something', PHP will take s as the intended delimiter and complain that you're not
+                    allowed to use alphanumeric characters as your delimiter.
+
+                    So if you want to pass (for instance) an i to show that you want a case-insensitve match, you pass
+                    it inside the string but outside of the regex delimiters:
+                    '/something/i'
+                    If you want to use something other than / as your delimiter, you can, such as if you're matching a
+                    URL and don't want to have to escape all the slashes:
+                    '~something~'
+              </li>
+
+              <li>
+                -functions: <br>
+              		function functionName(argument1, argument2){
+              			something;
+              		}
+              </li>
+            </ul>
+          </p>
+        </section>
+
+        <aside id="sidebar">
+          <p>
+            Table of Contents
+          </p>
+          <ol>
+            <li>Variables</li>
+            <li>Echo</li>
+            <li>Print</li>
+            <li>Html Tags in Echo/Print</li>
+            <li>Comments</li>
+            <li>Error Reporting</li>
+            <li>Concatenation</li>
+            <li>If Statements</li>
+            <li>Assignment Operator</li>
+            <li>Comparison Operator</li>
+            <li>Arithmatic Operator</li>
+            <li>Logical Operator</li>
+            <li>Triple Equals</li>
+            <li>While Loop</li>
+            <li>Do While Loop</li>
+            <li>For Loop</li>
+            <li>Switch Statement</li>
+            <li>Die/Exit Fucntions</li>
+            <li>Expression Matching</li>
+            <li>Functions</li>
+
+
+          </ol>
+        </aside>
+
+        <section id="">
+
+        </section>
+      </div>
+
+      <footer id="main-footer">
+        <p>Copyright &copy; My Website </p>
+      </footer>
+
+      </div>
+  </body>
+</html>

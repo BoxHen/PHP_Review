@@ -11,6 +11,15 @@
    margin: auto;
    overflow: hidden;
  }
+ .indent{
+   padding-left: 1.2em;
+ }
+ .indent1{
+   padding-left: 3.2em;
+ }
+ .indent2{
+   padding-left: 5.2em;
+ }
  #main-header{
    background-color: coral;
    color: #fff;

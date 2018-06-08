@@ -72,6 +72,9 @@
   background: #333;
   color: white;
 }
+#sidebar a{
+  color: white;
+}
 #main-footer{
   background-color: black;
   padding: 20px 0;

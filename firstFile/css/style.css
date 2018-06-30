@@ -65,12 +65,14 @@
   box-sizing: border-box;
 }
 #sidebar{
-  float: left;
+  position: fixed;
   width: 30%;
   padding: 0 30px;
   box-sizing: border-box;
   background: #333;
   color: white;
+  left: 0;
+  top: 25em;
 }
 #sidebar a{
   color: white;

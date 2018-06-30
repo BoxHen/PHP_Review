@@ -65,64 +65,67 @@
             <ul>
               <!-- ============================================================================================= -->
               <li> <a id="VariableJump"></a>
-                "$": <br>
-  		            <div class="indent">
-                    used to signify variable <br>
-    		            can start with underscore or letter or number
-                  </div>
+                "$":
+                  <ol>
+                    <li>used to signify variable</li>
+                    <li>can start with underscore or letter or number</li>
+                  </ol>
               </li>
-              <!-- ============================================================================================= -->
+              <!-- ============================================================================================= --> <hr>
               <li> <a id="EchoJump"></a>
-                echo: <br>
-              		<div class="indent">
-                    is a language contruct that allows you to print to screen <br>
-                		can use single or double quotes <br> <br>
-
-                		"" for echo-ing variables (slower) <br>
-                		In double quoted strings other escape sequences are interpreted as well any variable will be <br>
-                		replaced by their value. <br> <br>
-
-                		'' easiest way to sepecify a stringThis method in used when we want to the string to be exactly <br>
-                		as it is written. When string is specified in single quotes PHP will not evaluate it or interpret <br>
-                		escape characters except single quote with backslash (‘) and backslash(\) which has to be escaped. <br> <br>
-
-                		we can use tags like this in echo &ltstrong&gt &lt/strong&gt
-                  </div>
+                echo:
+                  <ol>
+                    <li>is a language contruct that allows you to print to screen (can use single or double quotes) </li>
+                    <li>"" for echo-ing variables (slower)
+                      <ul>
+                        <li>In double quoted strings other escape sequences are interpreted as well any variable will be replaced by their value. </li>
+                      </ul>
+                   </li>
+                   <li>'' easiest way to sepecify a stringThis method in used when we want to the string to be exactly
+                   as it is written. When string is specified in single quotes PHP will not evaluate it or interpret
+                   escape characters except single quote with backslash (‘) and backslash(\) which has to be escaped.
+                 </li>
+                 <li>we can use tags like this in echo &ltstrong&gt &lt/strong&gt</li>
+                  </ol>
               </li>
-              <!-- ============================================================================================= -->
+              <!-- ============================================================================================= --> <hr>
               <li> <a id="PrintJump"></a>
-                print: <br>
-                  <div class="indent">
-                    older way to print data to screen/browser <br>
-                    and slower and more characters to type
-                  </div>
+                print:
+                  <ol>
+                    <li>older way to print data to screen/browser and slower and more characters to type</li>
+                  </ol>
               </li>
-              <!-- ============================================================================================= -->
+              <!-- ============================================================================================= --> <hr>
               <li> <a id="HTMLJump"></a>
                 html tags in echo/print: <br>
-              		<div class="indent">
-                    we will get error with semi colon since it will think: <br>
-                		echo "&ltinput type = "text" name = "name"&gt"; <br>
-                		the "" on type = "text" ends the quotations <br>
-                		FIX: use type = 'text' inside, use echo '', or escape charaters \" (preferable to use 2nd or last)
-                  </div>
+                  <ol>
+                    <li>we will get error with semi colon since it will think: </li>
+                      <ul>
+                        <li>echo "&ltinput type = "text" name = "name"&gt"; </li>
+                        <li>the "" on type = "text" ends the quotations </li>
+                        <li>FIX: use type = 'text' inside, use echo '', or escape charaters \" (preferable to use 2nd or last)</li>
+                      </ul>
+                  </ol>
               </li>
-              <!-- ============================================================================================= -->
+              <!-- ============================================================================================= --> <hr>
               <li> <a id="CommentsJump"></a>
                 comments: <br>
-                  <span class="indent">use // or /(star)(star)/</span>
+                  <ol>
+                    <li>use // or /* */</li>
+                  </ol>
               </li>
-              <!-- ============================================================================================= -->
+              <!-- ============================================================================================= --> <hr>
               <li> <a id="ErrorJump"></a>
                 in error reporting:
-              		<div class="indent">if no errors appear but something is wrong check in php.ini file and make sure error_reporting
-              		is not set to 0 also turn error_reporting off when done with coding so viewers dont see errors
-              		if page doesnt load</div> <br>
-              		<span class="indent">for security reasons we turn error_reporting to 0</span> <br>
-
-              		<span class="indent">we can change it dynamically in code with "error_reporting('E_ALL');"</span>
+                  <ol>
+                    <li>if no errors appear but something is wrong check in php.ini file and make sure error_reporting
+                		is not set to 0 also turn error_reporting off when done with coding so viewers dont see errors
+                		if page doesnt load</li>
+                    <li>for security reasons we turn error_reporting to 0</li>
+                    <li>we can change it dynamically in code with "error_reporting('E_ALL');"</li>
+                  </ol>
               </li>
-              <!-- ============================================================================================= -->
+              <!-- ============================================================================================= --> <hr>
               <li> <a id="ConcatJump"></a>
                 concatenation: <br>
               		<span class="indent">We concat with the dot "." </span> <br>
@@ -249,11 +252,12 @@
                   <span class="indent"> to return, we do the same thing as usual</span>
               </li>
               <!-- ============================================================================================= -->
-              <li> <a id="FunctionsJump"></a>
-                -functions: <br>
-              		function functionName(argument1, argument2){
-              			something;
-              		}
+              <li> <a id="GlobalJump"></a>
+                -Global variables and Functions: <br>
+                  <span class="indent">function functionName(argument1, argument2){</span> <br>
+                    <span class="indent1">something;</span> <br>
+                    <span class="indent1">return something;</span> <br>
+                  <span class="indent">}</span> <br>
 
               </li>
               <!-- ============================================================================================= -->

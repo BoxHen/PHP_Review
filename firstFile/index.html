@@ -128,64 +128,90 @@
               <!-- ============================================================================================= --> <hr>
               <li> <a id="ConcatJump"></a>
                 concatenation: <br>
-              		<span class="indent">We concat with the dot "." </span> <br>
-              		<span class="indent">|ex| $day = 'Saturday'; $date = 4; $year = 2018;</span> <br>
-              			 <span class="indent1">echo 'The date is '.$day.' '.$date.' '.$year;</span> <br>
-              								<span class="indent2">OR</span> <br>
-              			 <span class="indent1">echo "The date is $day $date $year";</span> <br>
-              		<span class="indent">with " " we don't need the dot</span> <br>
-              		<span class="indent">' ' is faster and with complex code ' ' may be better</span>
+                  <ol>
+                    <li>We concat with the dot "."</li>
+                    <li>|ex| $day = 'Saturday'; $date = 4; $year = 2018;</li>
+                      <ul>
+                        echo 'The date is '.$day.' '.$date.' '.$year;
+                          <ul>
+                            OR
+                          </ul>
+                        echo "The date is $day $date $year";
+                      </ul>
+                    <li>with " " we don't need the dot</li>
+                    <li>' ' is faster and with complex code ' ' may be better</li>
+                  </ol>
               </li>
-              <!-- ============================================================================================= -->
+              <!-- ============================================================================================= --> <hr>
               <li> <a id="IfJump"></a>
                 if statements <br>
-		              <span class="indent">same concept as other language</span>
+                  <ol>
+                    <li>same concept as other language</li>
+                  </ol>
               </li>
-              <!-- ============================================================================================= -->
+              <!-- ============================================================================================= --> <hr>
               <li> <a id="AssignmentJump"></a>
                 assignment operator: <br>
-                  <span class="indent">+=, -=, etc exist in php</span> <br>
-                  <span class="indent">.= is a concat</span>
+                  <ol>
+                    <li>+=, -=, etc exist in php</li>
+                    <li>.= is a concat</li>
+                  </ol>
               </li>
-              <!-- ============================================================================================= -->
+              <!-- ============================================================================================= --> <hr>
               <li> <a id="ComparisonJump"></a>
                 comparison operator <br>
-              		<span class="indent">!=, ==, <, >, <=, >=</span> <br>
-              		<span class="indent"><> is same as !=</span>
+                  <ol>
+                    <li> !=, ==, <, >, <=, >= </li>
+                  </ol>
               </li>
-              <!-- ============================================================================================= -->
+              <!-- ============================================================================================= --> <hr>
               <li> <a id="ArithmaticJump"></a>
                 arithmetic operators: <br>
-		                 <span class="indent">same concept as other lang (+, -, /, *, %)</span>
+                  <ol>
+                    <li>same concept as other lang (+, -, /, *, %)</li>
+                  </ol>
               </li>
-              <!-- ============================================================================================= -->
+              <!-- ============================================================================================= --> <hr>
               <li> <a id="LogicalJump"></a>
                 Logical operator: <br>
-              		<span class="indent">&& or AND</span> <br>
-              		<span class="indent">|| or OR</span>
+                  <ol>
+                    <li>&& or keyword "AND" </li>
+                    <li>|| or keyword "OR" </li>
+                  </ol>
               </li>
-              <!-- ============================================================================================= -->
+              <!-- ============================================================================================= --> <hr>
               <li> <a id="TripleJump"></a>
-                Triple equals: same as == but compares data type as well
+                Triple equals:
+                  <ol>
+                    <li>same as == but compares data type as well</li>
+                  </ol>
               </li>
-              <!-- ============================================================================================= -->
+              <!-- ============================================================================================= --> <hr>
               <li> <a id="WhileJump"></a>
                 while loop: same as other lang <br>
-		                <span class="indent">while(){}</span>
+		                <ol>
+                      <li>while(){}</li>
+                    </ol>
               </li>
-              <!-- ============================================================================================= -->
+              <!-- ============================================================================================= --> <hr>
               <li> <a id="DoWhileJump"></a>
                 do while loop: <br>
-              		<span class="indent">do{</span> <br>
-              			<span class="indent1">//executes this first and at least once</span> <br>
-              		<span class="indent">}while()</span>
+                  <ol>
+                    <li> do{ </li>
+                      <ul>
+                        //executes this first and at least once
+                      </ul>
+                    }while()
+                  </ol>
               </li>
-              <!-- ============================================================================================= -->
+              <!-- ============================================================================================= --> <hr>
               <li> <a id="ForJump"></a>
                 for loop: same as other lang <br>
-		                 <span class="indent">for(i = 0; i <= 10; i++){}</span>
+                  <ol>
+                    <li>for(i = 0; i <= 10; i++){} </li>
+                  </ol>
               </li>
-              <!-- ============================================================================================= -->
+              <!-- ============================================================================================= --> <hr>
               <li> <a id="SwitchJump"></a>
                 switch statement: <br>
               		<span class="indent">switch(case){   </span> <br>
@@ -198,29 +224,37 @@
               			<span class="indent1">default:     </span> <br>
               		<span class="indent">      }         </span> <br>
               </li>
-              <!-- ============================================================================================= -->
+              <!-- ============================================================================================= --> <hr>
               <li> <a id="ExitJump"></a>
                 die and exit functions: <br>
-              		die(); and exit(); do same thing - kill rest of code - goes over them
-              		we can print with the functions by doing die('error') OR exit('error')
-              		we do this because <br>
-              			<span class="indent">|Ex| mysql_connect('localhost','root','') or exit('Could not connect to database') </span> <br>
-              			   <span class="indent1">echo 'Connected!'</span> <br>
-              			this will display connected! if connection successful or exits if not
+                    <ol>
+                      <li> die(); and exit(); do same thing - kill rest of code - goes over them
+                  		we can print with the functions by doing die('error') OR exit('error')
+                  		we do this because </li>
+                      <li>|Ex| mysql_connect('localhost','root','') or exit('Could not connect to database')</li>
+                        <ul>
+                          <li>echo 'Connected!'</li>
+                          <li>this will display connected! if connection successful or exits if not</li>
+                        </ul>
+                    </ol>
               </li>
-              <!-- ============================================================================================= -->
+              <!-- ============================================================================================= --> <hr>
               <li> <a id="ExpressionJump"></a>
                 expression matching: <br>
-                  preg_match <br> <br>
+                  <div class="indent">
+                    preg_match <br> <br>
 
-                  $string = 'This is a string.' <br>
-                  if (preg_match('/is/', $string) ){ <br>
-                    <span class="indent">echo 'Match Found'; </span> <br>
-                  }else { <br>
-                    <span class="indent">echo 'No match found';</span> <br>
-                  } <br>
-                  NOTE:
-                    <div class="indent">
+                    $string = 'This is a string.' <br>
+                    if (preg_match('/is/', $string) ){ <br>
+                      <span class="indent">echo 'Match Found'; </span> <br>
+                    }else { <br>
+                      <span class="indent">echo 'No match found';</span> <br>
+                    } <br>
+                  </div>
+
+                  <ol>
+                    <li>
+                      NOTE: <br>
                       The solution (which other answers don't mention—at least at the time of my originally
                       writing this) is that when PHP refers to delimiters, it's not referring to the delimiters you
                       see in your code (which are quote marks) but the next characters inside the string.
@@ -240,18 +274,19 @@
                       If you want to use something other than / as your delimiter, you can, such as if you're matching a
                       URL and don't want to have to escape all the slashes: <br>
                       '~something~'
-                    </div>
+                    </li>
+                  </ol>
+
               </li>
-              <!-- ============================================================================================= -->
+              <!-- ============================================================================================= --> <hr>
               <li> <a id="FunctionsJump"></a>
                 -functions: <br>
               		<span class="indent">function functionName(argument1, argument2){</span> <br>
               			<span class="indent1">something;</span> <br>
                     <span class="indent1">return something;</span> <br>
               		<span class="indent">}</span> <br>
-                  <span class="indent"> to return, we do the same thing as usual</span>
               </li>
-              <!-- ============================================================================================= -->
+              <!-- ============================================================================================= --> <hr>
               <li> <a id="GlobalJump"></a>
                 -Global variables and Functions: <br>
                   <span class="indent">function functionName(argument1, argument2){</span> <br>
@@ -260,7 +295,7 @@
                   <span class="indent">}</span> <br>
 
               </li>
-              <!-- ============================================================================================= -->
+              <!-- ============================================================================================= --> <hr>
 
             </ul>
           </p>

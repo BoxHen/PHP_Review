@@ -289,10 +289,85 @@
               <!-- ============================================================================================= --> <hr>
               <li> <a id="GlobalJump"></a>
                 -Global variables and Functions: <br>
-                  <span class="indent">function functionName(argument1, argument2){</span> <br>
-                    <span class="indent1">something;</span> <br>
-                    <span class="indent1">return something;</span> <br>
-                  <span class="indent">}</span> <br>
+                  <ol>
+                      <img class="image" src="images/global.PNG" alt="GlobalExample">
+                      <li>user_ip is not seen by the function until "global" keyword is used</li>
+                  </ol>
+
+              </li>
+              <!-- ============================================================================================= --> <hr>
+              <li> <a id="StringFunctionsJump"></a>
+                -String Functions: <br>
+                  <ol>
+                      <li>Syntax: str_word_count(string,return,char)</li>
+                        <ul>
+                          <li>The str_word_count() function counts the number of words in a string.</li>
+                          <li>string: required to check the string specified </li>
+                          <li>return: optional</li>
+                            <ol>
+                              Possible values:
+                              <li>0 - Default. Returns the number of words found</li>
+                              <li>1 - Returns an array with the words from the string</li>
+                              <li>2 - Returns an array where the key is the position of the word in the string, and value is the actual word</li>
+                            </ol>
+                          <li>char: optional. Specifies special characters to be considered as words.</li>
+                        </ul>
+
+                      <hr class="dashedLine">
+                      <li>Syntax: str_shuffle(string)</li>
+                        <ul>
+                          <li>string: Required. Specifies the string to shuffle</li>
+                          <li>The str_shuffle() function randomly shuffles all the characters of a string.</li>
+                        </ul>
+
+                      <hr class="dashedLine">
+                      <li>Syntax: strrev(string)</li>
+                        <ul>
+                          <li>string: Required. Specifies the string to reverse</li>
+                          <li>The strrev() function reverses a string.</li>
+                        </ul>
+
+                      <hr class="dashedLine">
+                      <li>Syntax: similar_text(string1,string2,percent)</li>
+                        <ul>
+                          <li>The similar_text() function calculates the similarity between two strings.</li>
+                          <li>string1: Required. Specifies the first string to be compared</li>
+                          <li>string2: Required. Specifies the second string to be compared</li>
+                          <li>percent: Optional. Specifies a variable name for storing the similarity in percent</li>
+                          <li>Return Value:	Returns the number of matching characters of two strings</li>
+                        </ul>
+
+                      <hr class="dashedLine">
+                      <li>Syntax: strlen(string)</li>
+                        <ul>
+                          <li>The strlen() function returns the length of a string.</li>
+                          <li>string: Required. Specifies the string to check</li>
+                          <li>Return Value: Returns the length of a string on success, and 0 if the string is empty</li>
+                        </ul>
+
+                      <hr class="dashedLine">
+                      <li>Syntax: trim(string,charlist)</li>
+                        <ul>
+                          <li>The trim() function removes whitespace and other predefined characters from both sides of a string.</li>
+                          <li>string	Required. Specifies the string to check</li>
+                          <li>charlist	Optional. Specifies which characters to remove from the string. If omitted, all of the following characters are removed:</li>
+                            <ul>
+                              <li>"\0" - NULL</li>
+                              <li> "\t" - tab </li>
+                              <li>"\n" - new line </li>
+                              <li>"\x0B" - vertical tab </li>
+                              <li>"\r" - carriage return </li>
+                              <li>" " - ordinary white space </li>
+                            </ul>
+                          <li>Related functions:</li>
+                            <ul>
+                              <li>ltrim() - Removes whitespace or other predefined characters from the left side of a string</li>
+                              <li>rtrim() - Removes whitespace or other predefined characters from the right side of a string</li>
+                            </ul>
+                        </ul>
+
+
+                  </ol>
 
               </li>
               <!-- ============================================================================================= --> <hr>

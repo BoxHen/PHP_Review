@@ -7,8 +7,8 @@
    margin: 0;
  }
  .container{
-   width: 80%;
-   margin: auto;
+   width: 95%;
+   margin: 0 1% 0 1%;
    overflow: hidden;
  }
  .indent{
@@ -21,6 +21,7 @@
    padding-left: 5.2em;
  }
  .image{
+   max-width: 95%;
    border: 1px solid black;
  }
  .dashedLine{
@@ -66,19 +67,19 @@
 }
 #main{
   float: right;
-  width: 70%;
-  padding: 0 30px;
+  width: 80%;
+  padding: 0 10px;
   box-sizing: border-box;
 }
 #sidebar{
-  position: fixed;
-  width: 30%;
-  padding: 0 30px;
+  width: 20%;
+  padding: 0 5px;
   box-sizing: border-box;
   background: #333;
   color: white;
   left: 0;
   top: 25em;
+  font-size: .7em;
 }
 #sidebar a{
   color: white;

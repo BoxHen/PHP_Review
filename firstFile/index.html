@@ -242,7 +242,7 @@
               <li> <a id="ExpressionJump"></a>
                 expression matching: <br>
                   <div class="indent">
-                    preg_match <br> <br>
+                    preg_match() function searches string for pattern, returning true if pattern exists, and false otherwise. <br> <br>
 
                     $string = 'This is a string.' <br>
                     if (preg_match('/is/', $string) ){ <br>
@@ -293,7 +293,6 @@
                       <img class="image" src="images/global.PNG" alt="GlobalExample">
                       <li>user_ip is not seen by the function until "global" keyword is used</li>
                   </ol>
-
               </li>
               <!-- ============================================================================================= --> <hr>
               <li> <a id="StringFunctionsJump"></a>
@@ -366,7 +365,94 @@
                             </ul>
                         </ul>
 
+                      <hr class="dashedLine">
+                      <li>Syntax: addslashes(string)</li>
+                        <ul>
+                          <li>The addslashes() function returns a string with backslashes in front of predefined characters.</li>
+                            <ul>
+                              <li>single quote (')</li>
+                              <li>double quote (")</li>
+                              <li>backslash (\)</li>
+                              <li>NULL</li>
+                            </ul>
+                          <li>we may want add slashes for viewing on a page</li>
+                          <li>reverse of this is "stripslashes(string)"</li>
+                          <li>string	Required. Specifies the string to be escaped</li>
+                        </ul>
 
+                  </ol>
+
+              </li>
+              <!-- ============================================================================================= --> <hr>
+              <li> <a id="ArrayJump"></a>
+                Arrays in PHP: <br>
+                  <ol>
+                    <li>arrays must be of one data type</li>
+                    <li>arrays start at index 0 and goes on </li>
+                    <li>arrays can be accessed by indexing (array[i])</li>
+                  </ol>
+              </li>
+              <!-- ============================================================================================= --> <hr>
+              <li> <a id="ArrayJump"></a>
+                Arrays in PHP: <br>
+                  <ol>
+                    <u>Arrays: </u>
+                    <li>arrays must be of one data type</li>
+                    <li>arrays start at index 0 and goes on </li>
+                    <li>arrays can be accessed by indexing (array[i])</li>
+                  </ol>
+
+                  <hr class="dashedLine">
+                  <ol>
+                    <u>Associative Arrays: </u>
+                    <img class="image" src="images/AssocArray.PNG" alt="AssociativeArray">
+                    <li>here we are asscoiating different values to differnt keys</li>
+                    <li>we do not use the indexes anymore but the key</li>
+                  </ol>
+
+                  <hr class="dashedLine">
+                  <ol>
+                    <u>Multi-Dimensional Arrays: </u>
+                    <img class="image" src="images/MultiDimenArray.PNG" alt="MultiDimensionalArray">
+                    <li>basically it is an array in an array and we can access members with double [][] </li>
+                  </ol>
+              </li>
+              <!-- ============================================================================================= --> <hr>
+              <li> <a id="foreachJump"></a>
+                foreach: <br>
+                  <ol>
+                    <img class="image" src="images/foreach.PNG" alt="foreach">
+                    <li>The foreach loop works only on arrays, and is used to loop through each key/value pair in an array.</li>
+                  </ol>
+
+              </li>
+              <!-- ============================================================================================= --> <hr>
+              <li> <a id="IncludeJump"></a>
+                include and require: <br>
+                  <ol>
+                    <li>The include (or require) statement takes all the text/code/markup that exists in the specified
+                      file and copies it into the file that uses the include statement. Including files is very useful
+                      when you want to include the same PHP, HTML, or text on multiple pages of a website.</li>
+                    <li>The include and require statements are identical, except upon failure:</li>
+                      <ul>
+                        <li>require will produce a fatal error (E_COMPILE_ERROR) and stop the script</li>
+                        <li>include will only produce a warning (E_WARNING) and the script will continue</li>
+                      </ul>
+                    <li>If you want the program to continue even with missing files use the include statement. Otherwise
+                      use the require statement to avoid security/integrity loss in the case a key file is missing.</li>
+                    <li>Including files saves a lot of work. This means that you can create a standard header, footer,
+                      or menu file for all your web pages. Then, when the header needs to be updated, you can only update
+                      the header include file.</li>
+                    <li>Syntax: include 'filename'; OR require 'filename';</li>
+
+                    <li>Related Functions:</li>
+                      <ul>
+                        <li>require_once 'filename'; OR include_once 'filename';</li>
+                        <li>same fucntionalities as the require and include but checks if the file has been included or not.
+                            If included, it will not add it again but will add it if it isn't yet included.</li>
+                        <img class="image" src="images/requireOnce.PNG" alt="requireOnce">
+                        <li>require once is the same as the if statement above</li>
+                      </ul>
                   </ol>
 
               </li>
@@ -410,6 +496,5 @@
         <p>Copyright &copy; My Website </p>
       </footer>
 
-      </div>
   </body>
 </html>

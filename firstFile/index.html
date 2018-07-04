@@ -380,6 +380,52 @@
                           <li>string	Required. Specifies the string to be escaped</li>
                         </ul>
 
+                      <hr class="dashedLine">
+                      <li>Syntax: strpos(string,find,start)</li>
+                        <ul>
+                          <li>The strpos() function finds the position of the first occurrence of a string inside another string.</li>
+                          <li>string	Required. Specifies the string to search </li>
+                          <li>find	Required. Specifies the string to find </li>
+                          <li>start	Optional. Specifies where to begin the search </li>
+                        </ul>
+
+                      <hr class="dashedLine">
+                      <li>Syntax: substr_replace(string,replacement,start,length)</li>
+                        <ul>
+                          <li>The substr_replace() function replaces a part of a string with another string.</li>
+                          <li>string: Required. Specifies the string to check</li>
+                          <li>replacement: Required. Specifies the string to insert</li>
+                          <li>start: Required. Specifies where to start replacing in the string</li>
+                            <ol>
+                              <li>  A positive number - Start replacing at the specified position in the string </li>
+                              <li>  Negative number - Start replacing at the specified position from the end of the string </li>
+                              <li>  0 - Start replacing at the first character in the string </li>
+                            </ol>
+                          <li>length: Optional. Specifies how many characters should be replaced. Default is the same length as the string.</li>
+                            <ol>
+                              <li> A positive number - The length of string to be replaced  </li>
+                              <li> A negative number - How many characters should be left at end of string after replacing </li>
+                              <li> 0 - Insert instead of replace </li>
+                            </ol>
+                        </ul>
+
+                      <hr class="dashedLine">
+                      <li>Syntax: str_replace(find,replace,string,count)</li>
+                        <ul>
+                          <li>The str_replace() function replaces some characters with some other characters in a string.</li>
+                          <li>find: Required. Specifies the value to find</li>
+                          <li>replace: Required. Specifies the value to replace the value in find</li>
+                          <li>string: Required. Specifies the string to be searched</li>
+                          <li>count: Optional. A variable that counts the number of replacements</li>
+                          <img class="image" src="images/str_replace.PNG" alt="str_replace">
+                          <li>we can have find and replace be an array. This way we can replace multiple strings have them replaced respectively </li>
+                            <ol>
+                              <li>here, "is" is being replaced with "IS", "string" is being replaced with "STRING", and "example is being replaced with ' '"</li>
+                            </ol>
+                          <img class="image" src="images/str_replaceWordCensor.PNG" alt="str_replaceWordCensor">
+                          <li>NOTE: if you want case insensitivity, use str_ireplace(find,replace,string,count)</li>
+                        </ul>
+
                   </ol>
 
               </li>
@@ -453,6 +499,52 @@
                         <img class="image" src="images/requireOnce.PNG" alt="requireOnce">
                         <li>require once is the same as the if statement above</li>
                       </ul>
+                  </ol>
+
+              </li>
+              <!-- ============================================================================================= --> <hr>
+              <li> <a id="UpperLowerJump"></a>
+                Upper/Lower case Conversion: <br>
+                  <ol>
+                    <li>Syntax: strtolower(string)</li>
+                      <ul>
+                        <li>The strtolower() function converts a string to lowercase.</li>
+                        <li>string: Required. Specifies the string to convert</li>
+                      </ul>
+                  </ol>
+
+                  <hr class="dashedLine">
+                  <ol>
+                    <li>Syntax: strtoupper(string)</li>
+                      <ul>
+                        <li>The strtoupper() function converts a string to uppercase.</li>
+                        <li>string: Required. Specifies the string to convert</li>
+                      </ul>
+                  </ol>
+
+                  <hr class="dashedLine">
+                  <ol>
+                    <li>Related Functions:</li>
+                      <ul>
+                        <li> strtoupper() - converts a string to uppercase </li>
+                        <li> lcfirst() - converts the first character of a string to lowercase </li>
+                        <li> ucfirst() - converts the first character of a string to uppercase </li>
+                        <li> ucwords() - converts the first character of each word in a string to uppercase </li>
+                      </ul>
+                  </ol>
+
+                  <hr class="dashedLine">
+                  <ol>
+                    <li>Useful for when we need to check forms and validate fields. We don't know how the user will
+                      enter characters but we can convrt it to all upper or lower and then check.</li>
+                  </ol>
+              </li>
+              <!-- ============================================================================================= --> <hr>
+              <li> <a id="foreachJump"></a>
+                foreach: <br>
+                  <ol>
+                    <img class="image" src="images/foreach.PNG" alt="foreach">
+                    <li>The foreach loop works only on arrays, and is used to loop through each key/value pair in an array.</li>
                   </ol>
 
               </li>

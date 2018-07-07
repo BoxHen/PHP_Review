@@ -598,6 +598,24 @@
                   </ol>
               </li>
               <!-- ============================================================================================= --> <hr>
+              <li> <a id="IPJump"></a>
+                IP Address: <br>
+                  <ol>
+                    <li>we can use $_SERVER('REMOTE ADDR') to get the users ip address</li>
+                    <li>blocking an ip address</li>
+                      <ul>
+                        <li>we can then make an array of ip addresses and with a foreach, check if that ip address matches </li>
+                        <li>problem with this is with shared networks(multiple computers in a room) or  a proxy</li>
+                      </ul>
+                    <li>A better way to do it is to check three elements</li>
+                      <ul>
+                        <li>$_SERVER['HTTP_CLIENT_IP']: Checks actual internet ip address instead of individual computer </li>
+                        <li>$_SERVER['HTTP_X_FORWARDDED_FOR']: Checks if proxy being used </li>
+                        <img class="image" src="images/IP.PNG" alt="IPaddress">
+                      </ul>
+                  </ol>
+              </li>
+              <!-- ============================================================================================= --> <hr>
 
             </ul>
           </p>

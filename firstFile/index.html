@@ -619,7 +619,13 @@
               <li> <a id="BrowserJump"></a>
                 Getting a visitors Browser: <br>
                   <ol>
-                    <li></li>
+                    <li>$browser = get_browser(null, true); print_r($browser);</li>
+                      <ul>
+                        <li>this gets us an Associative array where we can look up browser to determine what browser is used </li>
+                      </ul>
+                    <img class="image" src="images/Browser.PNG" alt="Browser">
+                    <li>this checks if the user is using chrome</li>
+                    <li>useful for compatability issues on different browsers and allows us to notify to the user to use the right browser</li>
                   </ol>
               </li>
               <!-- ============================================================================================= --> <hr>

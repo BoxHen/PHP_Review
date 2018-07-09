@@ -1,4 +1,6 @@
 <?php
 $browser = get_browser(null, true);
-print_r($browser);
+$browser = $browser['browser'];
+echo $browser;
+//print_r($browser);
  ?>

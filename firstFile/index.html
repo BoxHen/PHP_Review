@@ -629,6 +629,65 @@
                   </ol>
               </li>
               <!-- ============================================================================================= --> <hr>
+              <li> <a id="GetJump"></a>
+                Using $_GET: <br>
+                  <ol>
+                    <li>this will allow us to get the fields we place on a page</li>
+                    <li>we need to check: (below 1, 2, 3)</li>
+                    <img class="image" src="images/$_GET.PNG" alt="$_GET">
+                    <li>we can use htmlentities to make sure the user cannot enter in code or tags to modify our form</li>
+                    <img class="image" src="images/htmlentities.PNG" alt="htmlentities">
+                    <ul>
+                      <li>makes sure that the entities are displayed as opposed to tags</li>
+                    </ul>
+                  </ol>
+              </li>
+              <!-- ============================================================================================= --> <hr>
+              <li> <a id="PostJump"></a>
+                Using $_POST: <br>
+                  <ol>
+                    <li>Not included in URL</li>
+                    <li>good for passwords, long registration forms, etc</li>
+                    <img class="image" src="images/$_POST.PNG" alt="$_POST">
+                  </ol>
+              </li>
+              <!-- ============================================================================================= --> <hr>
+              <li> <a id="FormJump"></a>
+                Working with form data: <br>
+                  <ol>
+                    <li>action is where the form will submit to when the submit button is clicked</li>
+                    <li>method will be GET or POST depending on how the info is sent</li>
+                      <ul>
+                        <li>GET will be visible on the URL while  POST will not be</li>
+                      </ul>
+                    <img class="image" src="images/$_POST.PNG" alt="$_POST">
+                  </ol>
+              </li>
+              <!-- ============================================================================================= --> <hr>
+              <li> <a id="SessionJump"></a>
+                Sessions in PHP: <br>
+                  <ol>
+                    <li>Sessions are stored on the servers so they are hidden from the users</li>
+                    <li>to set a session, we have to start with session_start();</li>
+                    <img class="image" src="images/Session.PNG" alt="Session">
+                    <li>this is now a session name and exists only on this page now but since it is a session, it can bhe accessed by any of our other pages at any time even if we don't declare it</li>
+                    <li>we will need to include session_start(); even when we are reading back </li>
+                    <img class="image" src="images/SessionView.PNG" alt="SessionView">
+                    <li>useful for user log in/keep them logged in</li>
+                      <ul>
+                        <li>Above code shows that $_SESSION['username'] must be set to do something</li>
+                      </ul>
+                  </ol>
+
+                  <hr class="dashedLine">
+                  <ol>
+                    <li>to uunset a session we still need to use session_start();</li>
+                    <li>To unset a session we can use unset(); to unset a particular session or session_destroy(); to unset all session related to that user/server</li>
+                    <img class="image" src="images/UnsetSession.PNG" alt="unsetSession">
+                    <img class="image" src="images/SessionDestroy.PNG" alt="SessionDestroy">
+                  </ol>
+              </li>
+              <!-- ============================================================================================= --> <hr>
 
             </ul>
           </p>

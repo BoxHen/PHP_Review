@@ -688,6 +688,40 @@
                   </ol>
               </li>
               <!-- ============================================================================================= --> <hr>
+              <li> <a id="CookieJump"></a>
+                Cookies: <br>
+                  <ol>
+                    <li>A cookie is apiece of data or file that is stored with specific information and is unique to you and the website that you are viewing</li>
+                    <li>When viewing a website, and depending on the expiration date of the cookie, that piece of data will be relayed from your computer to the
+                      website. This way, wesites can store data about users or your specific prefrences on your computer for later access</li>
+                    <li>the difference is that sessions are closed as asoon as broswer is closed and the connection is off with the server. Cookies on the other hand,
+                      can be stored for longer times (perhaps years). </li>
+                    <li>To set a cookie, setcookie(name,value,expire,path,domain,secure,httponly);</li>
+                      <ul>
+                        <li>name	Required. Specifies the name of the cookie </li>
+                        <li>value	Optional. Specifies the value of the cookie</li>
+                        <li>expire	Optional. Specifies when the cookie expires. The value: time()+86400*30, will set the cookie to expire in 30 days. If this parameter
+                          is omitted or set to 0, the cookie will expire at the end of the session (when the browser closes). Default is 0</li>
+
+                        <li>path	Optional. Specifies the server path of the cookie. If set to "/", the cookie will be available within the entire domain. If set to
+                          "/php/", the cookie will only be available within the php directory and all sub-directories of php. The default value is the current directory
+                          that the cookie is being set in</li>
+
+                        <li>domain	Optional. Specifies the domain name of the cookie. To make the cookie available on all subdomains of example.com, set domain to
+                          "example.com". Setting it to www.example.com will make the cookie only available in the www subdomain</li>
+
+                        <li>secure	Optional. Specifies whether or not the cookie should only be transmitted over a secure HTTPS connection. TRUE indicates that the
+                          cookie will only be set if a secure connection exists. Default is FALSE</li>
+
+                        <li>httponly	Optional. If set to TRUE the cookie will be accessible only through the HTTP protocol (the cookie will not be accessible by
+                          scripting languages). This setting can help to reduce identity theft through XSS attacks. Default is FALSE</li>
+                      </ul>
+
+                    <li>cookies are stored on user computers so it is dangerous for sensative info</li>
+
+                  </ol>
+              </li>
+              <!-- ============================================================================================= --> <hr>
 
             </ul>
           </p>

@@ -691,7 +691,7 @@
               <li> <a id="CookieJump"></a>
                 Cookies: <br>
                   <ol>
-                    <li>A cookie is apiece of data or file that is stored with specific information and is unique to you and the website that you are viewing</li>
+                    <li>A cookie is a piece of data or file that is stored with specific information and is unique to you and the website that you are viewing</li>
                     <li>When viewing a website, and depending on the expiration date of the cookie, that piece of data will be relayed from your computer to the
                       website. This way, wesites can store data about users or your specific prefrences on your computer for later access</li>
                     <li>the difference is that sessions are closed as asoon as broswer is closed and the connection is off with the server. Cookies on the other hand,
@@ -718,7 +718,126 @@
                       </ul>
 
                     <li>cookies are stored on user computers so it is dangerous for sensative info</li>
+                    <li>to unset a cookie we can set the (-) time </li>
+                      <ul>
+                        <li>we use the unset cookie for log out buttons for example</li>
+                      </ul>
+                    <img class="image" src="images/unsetCookies.PNG" alt="unsetCookies">
 
+                  </ol>
+              </li>
+              <!-- ============================================================================================= --> <hr>
+              <li> <a id="FileJump"></a>
+                Interpretting a File: <br>
+                  <ol>
+                    <li>to do so, we use fopen(filename,mode,include_path,context)</li>
+                    <li>The fwrite() writes to an open file. The function will stop at the end of the file or when it reaches the specified length, whichever comes first.
+                      This function returns the number of bytes written, or FALSE on failure.</li>
+                      <ul>
+                        <li>filename: Required. Specifies the file or URL to open</li>
+                        <li>mode:     Required. Specifies the type of access you require to the file/stream.</li>
+                          <ul>
+                            Possible values:
+                            <li>"r" (Read only. Starts at the beginning of the file)</li>
+                            <li>"r+" (Read/Write. Starts at the beginning of the file)</li>
+                            <li>"w" (Write only. Opens and clears the contents of file; or creates a new file if it doesn't exist)</li>
+                            <li>"w+" (Read/Write. Opens and clears the contents of file; or creates a new file if it doesn't exist)</li>
+                            <li>"a" (Write only. Opens and writes to the end of the file or creates a new file if it doesn't exist)</li>
+                            <li>"a+" (Read/Write. Preserves file content by writing to the end of the file)</li>
+                            <li>"x" (Write only. Creates a new file. Returns FALSE and an error if file already exists)</li>
+                            <li>"x+" (Read/Write. Creates a new file. Returns FALSE and an error if file already exists)</li>
+                          </ul>
+                        <li>include_path: Optional. Set this parameter to '1' if you want to search for the file in the include_path (in php.ini) as well</li>
+                        <li>context:      Optional. Specifies the context of the file handle. Context is a set of options that can modify the behavior of a stream</li>
+                      </ul>
+
+                    <li>after opening the file, we can write to it using fwrite(file,string,length)</li>
+                      <ul>
+                        <li>file: Required. Specifies the open file to write to</li>
+                        <li>length: Optional. Specifies the maximum number of bytes to write</li>
+                        <li>string: Required. Specifies the string to write to the open file</li>
+                      </ul>
+                    <img class="image" src="images/fwrite.PNG" alt="fwrite">
+                    <li>use ."/n" to start at a new line</li>
+                    <li> make sure to use fclose(); to close the file opened</li>
+                    <li>the difference between write and append is that write will write over everything before but append will add to the existing file</li>
+                      <ul>
+                        <li>We will need to write at some point initally but to open that file again and add to it, we will need to use append </li>
+                      </ul>
+                    <img class="image" src="images/append.PNG" alt="Append">
+                    <li>here, a form was initally created with a name field and a submit button. If a name is submitted, a new name will be appended to the file.</li>
+                  </ol>
+
+                <hr class="dashedLine">
+                Reading from a File <br>
+                  <ol>
+                    <li>The fread() reads from an open file. The function will stop at the end of the file or when it reaches the specified length, whichever comes first.
+                      This function returns the read string, or FALSE on failure.</li>
+                    <li>fread(file,length)</li>
+                      <ul>
+                        <li>file	Required. Specifies the open file to read from</li>
+                        <li>length	Required. Specifies the maximum number of bytes to read</li>
+                      </ul>
+
+                    <hr class="dashedLine">
+                    <li>we can use file(path,include_path,context) which reads a file into an array. Each array element contains a line from the file, with newline
+                      still attached. </li>
+                      <ul>
+                        <li>path	Required. Specifies the file to read </li>
+                        <li>include_path	Optional. Set this parameter to '1' if you want to search for the file in the include_path (in php.ini) as well </li>
+                        <li>context	Optional. Specifies the context of the file handle. Context is a set of options that can modify the behavior of a stream. Can be skipped by using NULL.</li>
+                      </ul>
+                    <img class="image" src="images/readFile.PNG" alt="readFile">
+
+                    <hr class="dashedLine">
+                    <li> The explode() function breaks a string into an array.</li>
+                    <li> explode(separator,string,limit)</li>
+                      <ul>
+                        <li>separator: Required. Specifies where to break the string</li>
+                        <li>string: Required. The string to split</li>
+                        <li>limit: Optional. Specifies the number of array elements to return.</li>
+                        Possible values:
+                          <ul>
+                            <li>Greater than 0 - Returns an array with a maximum of limit element(s)</li>
+                            <li>Less than 0 - Returns an array except for the last -limit elements()</li>
+                            <li>0 - Returns an array with one element</li>
+                          </ul>
+                        <img class="image" src="images/explode.PNG" alt="explode">
+
+                      <hr class="dashedLine">
+                      <li>The implode() function returns a string from the elements of an array.</li>
+                      <li>implode(separator,array)</li>
+                        <ul>
+                          <li>separator: Optional. Specifies what to put between the array elements. Default is "" (an empty string)</li>
+                          <li>array: Required. The array to join to a string</li>
+                        </ul>
+
+                      <hr class="dashedLine">
+                      <li>The opendir() function opens a directory handle.</li>
+                      <li>opendir(path,context);</li>
+                        <ul>
+                          <li>path: Required. Specifies the directory path to be opened</li>
+                          <li>context: Optional. Specifies the context of the directory handle. Context is a set of options that can modify the behavior of a stream</li>
+                        </ul>
+
+                      <hr class="dashedLine">
+                      <li>The readdir() function returns the name of the next entry in a directory.</li>
+                      <li>readdir(dir_handle);</li>
+                        <ul>
+                          <li>dir_handle	Optional. Specifies the directory handle resource previously opened with opendir(). If this parameter is not specified, the last link opened by opendir() is assumed</li>
+                        </ul>
+                      <img class="image" src="images/listFiles.PNG" alt="List Files">
+
+
+                      </ul>
+
+                  </ol>
+              </li>
+              <!-- ============================================================================================= --> <hr>
+              <li> <a id="UploadJump"></a>
+                Uploading a File: <br>
+                  <ol>
+                    <li></li>
                   </ol>
               </li>
               <!-- ============================================================================================= --> <hr>

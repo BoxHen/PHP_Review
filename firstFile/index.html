@@ -390,6 +390,23 @@
                         </ul>
 
                       <hr class="dashedLine">
+                      <li>Syntax: substr(string,start,length)</li>
+                        <ul>
+                          <li>string	Required. Specifies the string to return a part of</li>
+                          <li>start	Required. Specifies where to start in the string</li>
+                            <ul>
+                              <li>A positive number - Start at a specified position in the string</li>
+                              <li>A negative number - Start at a specified position from the end of the string</li>
+                              <li>0 - Start at the first character in string</li>
+                            </ul>
+                          <li>length	Optional. Specifies the length of the returned string. Default is to the end of the string.</li>
+                            <ul>
+                              <li>A positive number - The length to be returned from the start parameter</li>
+                              <li>Negative number - The length to be returned from the end of the string</li>
+                            </ul>
+                        </ul>
+
+                      <hr class="dashedLine">
                       <li>Syntax: substr_replace(string,replacement,start,length)</li>
                         <ul>
                           <li>The substr_replace() function replaces a part of a string with another string.</li>
@@ -731,8 +748,7 @@
                 Interpretting a File: <br>
                   <ol>
                     <li>to do so, we use fopen(filename,mode,include_path,context)</li>
-                    <li>The fwrite() writes to an open file. The function will stop at the end of the file or when it reaches the specified length, whichever comes first.
-                      This function returns the number of bytes written, or FALSE on failure.</li>
+                    <li>The fopen() function opens a file or URL. If fopen() fails, it returns FALSE and an error on failure. You can hide the error output by adding an '@' in front of the function name.</li>
                       <ul>
                         <li>filename: Required. Specifies the file or URL to open</li>
                         <li>mode:     Required. Specifies the type of access you require to the file/stream.</li>
@@ -752,6 +768,8 @@
                       </ul>
 
                     <li>after opening the file, we can write to it using fwrite(file,string,length)</li>
+                    <li>The fwrite(file,string,length) writes to an open file. The function will stop at the end of the file or when it reaches the specified length, whichever comes first.
+                      This function returns the number of bytes written, or FALSE on failure.</li>
                       <ul>
                         <li>file: Required. Specifies the open file to write to</li>
                         <li>length: Optional. Specifies the maximum number of bytes to write</li>
@@ -891,6 +909,36 @@
                     <img class="image" src="images/uploadFiles2.PNG" alt="uploadFiles2">
                     <li>here we first grab the name of the file with $name, then we grab the temporary name(temporary location), then we check if the form is submitted
                       and if the file exists. After specifying the location, we can use move_uploaded_file(); to upload </li>
+
+                    <hr class="dashedLine">
+                    adding restrictions to what file type can be uploaded
+                    <li>we can do this with a combination of substr and strpos </li>
+                      <ul>
+                        <li>strpos will find the "." while substr will return the part of the string after the "." (jpg)</li>
+                      </ul>
+                    <img class="image" src="images/restrictFile.PNG" alt="restrictFile">
+
+                    <hr class="dashedLine">
+                    adding restrictions to what file size can be uploaded
+                    <li>we can add size resitrictions by using the $_FILES['file']['size'] and setting it to be under some restriction with a if statement</li>
+                    <img class="image" src="images/restrictFileSize.PNG" alt="restrictFileSize">
+
+                  </ol>
+              </li>
+              <!-- ============================================================================================= --> <hr>
+              <li> <a id="NonUniqueHitJump"></a>
+                Non-Unique Hit Counter: <br>
+                  <ol>
+                    <li>everytime page is refreshed, a value in text file get incremented</li>
+                    <img class="image" src="images/NonUniqueHitCounter.PNG" alt="NonUniqueHitCounter">
+                  </ol>
+              </li>
+              <!-- ============================================================================================= --> <hr>
+              <li> <a id="UniqueHitJump"></a>
+                Unique Hit Counter: <br>
+                  <ol>
+                    <li>Uses the users IPaddress so we have a accurate amount of unique visitors</li>
+                    <img class="image" src="images/NonUniqueHitCounter.PNG" alt="NonUniqueHitCounter">
                   </ol>
               </li>
               <!-- ============================================================================================= --> <hr>

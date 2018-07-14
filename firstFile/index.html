@@ -938,8 +938,37 @@
                 Unique Hit Counter: <br>
                   <ol>
                     <li>Uses the users IPaddress so we have a accurate amount of unique visitors</li>
-                    <img class="image" src="images/NonUniqueHitCounter.PNG" alt="NonUniqueHitCounter">
+                    <img class="image" src="images/UniqueHitCounter.PNG" alt="UniqueHitCounter">
+                    <li>here, we have a file called ip.txt which will store the ip address of visitors. We will check that our vistors ip address
+                        is not on the list, so therefore it is new. We then update the counter and update the ip.txt file to store the new ip address.</li>
                   </ol>
+              </li>
+              <!-- ============================================================================================= --> <hr>
+              <li> <a id="MD5Jump"></a>
+                MD5 Encryption: <br>
+                  <ol>
+                    <li>The md5() function calculates the MD5 hash of a string. The md5() function uses the RSA Data Security, Inc. MD5 Message-Digest Algorithm.</li>
+                      <ul>
+                        <li> From RFC 1321 - The MD5 Message-Digest Algorithm: "The MD5 message-digest algorithm takes as input a message of arbitrary length and
+                          produces as output a 128-bit "fingerprint" or "message digest" of the input. The MD5 algorithm is intended for digital signature applications,
+                          where a large file must be "compressed" in a secure manner before being encrypted with a private (secret) key under a public-key cryptosystem
+                          such as RSA."</li>
+                      </ul>
+                    <li>md5(string,raw)</li>
+                      <ul>
+                        <li>string: Required. The string to be calculated</li>
+                        <li>raw:   Optional. Specifies hex or binary output format:</li>
+                          <ul>
+                            <li>TRUE - Raw 16 character binary format</li>
+                            <li>FALSE - Default. 32 character hex number</li>
+                          </ul>
+                      </ul>
+                    <li>MD5 is a one way Encryption, so no way to get back to what it was</li>
+                      <ul>
+                        <li>this is useful since if anyone gains unauthorized access to server, they cannot directly view sensative information. They would be looking
+                          at the MD5 Encryption</li>
+                        <li>in real life we msut store passwords with at least 11 MD5 Encryption</li>
+                      </ul>
               </li>
               <!-- ============================================================================================= --> <hr>
 

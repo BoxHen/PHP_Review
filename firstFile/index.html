@@ -971,6 +971,33 @@
                       </ul>
               </li>
               <!-- ============================================================================================= --> <hr>
+              <li> <a id="EmailJump"></a>
+                Sending an Email: <br>
+                  <ol>
+                    <li>The mail() function allows you to send emails directly from a script.</li>
+                    <li>mail(to,subject,message,headers,parameters);</li>
+                      <ul>
+                        <li>to:         Required. Specifies the receiver / receivers of the email</li>
+                        <li>message:    Required. Defines the message to be sent. Each line should be separated with a LF (\n). Lines should not exceed 70 characters.</li>
+                        <li>headers:    Optional. Specifies additional headers, like From, Cc, and Bcc. The additional headers should be separated with a CRLF (\r\n).</li>
+                        <li>parameters: Optional. Specifies an additional parameter to the sendmail program (the one defined in the sendmail_path configuration setting).
+                          (i.e. this can be used to set the envelope sender address when using sendmail with the -f sendmail option)</li>
+                      </ul>
+                    <li>note: Note: When sending an email, it must contain a From header. This can be set with this parameter or in the php.ini file.</li>
+                    <img class="image" src="images/email.PNG" alt="email">
+                  </ol>
+              </li>
+              <!-- ============================================================================================= --> <hr>
+              <li> <a id="ContactFormJump"></a>
+                Contact Form: <br>
+                  <ol>
+                    <li>This shows how the mail(); can be used with a form to send mail</li>
+                    <img class="image" src="images/ContactForm.PNG" alt="ContactForm">
+                    <li>at the form section, I started to add a maxlength. this will stop the field from being filled in past the length specified but we still have an
+                      if statement to check the length in case the user tries to by pass it.</li>
+                  </ol>
+              </li>
+              <!-- ============================================================================================= --> <hr>
 
             </ul>
           </p>

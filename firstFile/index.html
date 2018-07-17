@@ -991,10 +991,33 @@
               <li> <a id="ContactFormJump"></a>
                 Contact Form: <br>
                   <ol>
-                    <li>This shows how the mail(); can be used with a form to send mail</li>
+                    <li>This shows how the mail(); can be used with a form to send mail </li>
                     <img class="image" src="images/ContactForm.PNG" alt="ContactForm">
                     <li>at the form section, I started to add a maxlength. this will stop the field from being filled in past the length specified but we still have an
                       if statement to check the length in case the user tries to by pass it.</li>
+                  </ol>
+              </li>
+              <!-- ============================================================================================= --> <hr>
+              <li> <a id="XMLJump"></a>
+                Intro to XML: <br>
+                  <ol>
+                    <li>Extensible Markup Language (XML) is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable.</li>
+                    <li>The simplexml_load_file() function converts the specified XML file into a SimpleXMLElement object.</li>
+                    <li>simplexml_load_file(file,classname,options,ns,is_prefix);</li>
+                      <ul>
+                        <li>file:      Required. Specifies the path to the XML file (we can specifiy URLs)</li>
+                        <li>classname: Optional. Specifies the class of the new object</li>
+                        <li>options:   Optional. Specifies additional Libxml parameters. Is set by specifying the option and 1 or 0 (TRUE or FALSE, e.g. LIBXML_NOBLANKS(1))</li>
+                        <li>ns:        Optional. Specifies a namespace prefix or URI</li>
+                        <li>is_prefix: Optional. Specifies a Boolean value. TRUE if ns is a prefix. FALSE if ns is a URI. Default is FALSE</li>
+                      </ul>
+                    <li>XML is case sensative</li>
+                    <img class="image" src="images/XMLSample.PNG" alt="XMLSample">
+                    <li>If we have a XML file like this we can read it in a php file like below (Billy is 16)</li>
+                    <img class="image" src="images/XMLRead.PNG" alt="XMLRead">
+                    <li>We can also get all the data out as such, as long as we know the structure it is stored</li>
+                    <img class="image" src="images/XMLForeach.PNG" alt="XMLForeach">
+                    <li>To access children we can used nested Foreach</li>
                   </ol>
               </li>
               <!-- ============================================================================================= --> <hr>

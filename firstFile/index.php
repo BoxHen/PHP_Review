@@ -1,13 +1,26 @@
 <?php
+// $mysqlhost = 'localhost';
+// $mysqluser = 'root';
+// $mysqlpass = '';
+// @$mysqlcon= mysqli_connect($mysqlhost,$mysqluser,$mysqlpass) or die('could not connect.');
+// MySQLi_select_db($mysqlcon , 'a_database') or die('no such db');
+//
+// echo 'connected';
 $conn_error = 'Could Not Connect';
 
 $mysql_host = 'localhost';
 $mysql_user = 'root';
 $mysql_pass = '';
 
-@sqli_connect($mysql_host, $mysql_user, $mysql_pass) or die($conn_error);
+$mysql_db = 'test';
 
-echo connected;
+@$mysql_conn = @mysqli_connect($mysql_host, $mysql_user, $mysql_pass) OR die('CANNOT CONNECT');
+  if(@mysQLi_select_db($mysql_conn, $mysql_db) ){
+    echo 'Connected';
+  }else{
+    die('Could not connect');
+  }
+
 
 /*
 NOTES:

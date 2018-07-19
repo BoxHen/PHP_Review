@@ -1025,13 +1025,27 @@
                 Databases: <br>
                   <ol>
                     <li>we can store info using files but its is more secure and efficient sometimes to use databases</li>
+                    <li>The mysqli_connect() function opens a new connection to the MySQL server.</li>
                     <li>To connect to a server and database we can use mysql_connect(server,user,pwd,newlink,clientflag)</li>
                       <ul>
-                        <li>server:     Optional. Specifies the server to connect to (can also include a port number.
-                          e.g. "hostname:port" or a path to a local socket for the localhost). Default value is "localhost:3306"</li>
-                        <li>user:       Optional. Specifies the username to log in with. Default value is the name of the user that owns the server process</li>
-                        <li>newlink:    Optional. If a second call is made to mysql_connect() with the same arguments, no new connection will be established; instead, the identifier of the already opened connection will be returned</li>
-                        <li>clientflag: Optional. Can be a combination of constants</li>
+                        <li>host	Optional. Specifies a host name or an IP address</li>
+                        <li>username	Optional. Specifies the MySQL username</li>
+                        <li>password	Optional. Specifies the MySQL password</li>
+                        <li>dbname	Optional. Specifies the default database to be used</li>
+                        <li>port	Optional. Specifies the port number to attempt to connect to the MySQL server</li>
+                        <li>socket	Optional. Specifies the socket or named pipe to be used</li>
+                        <hr class="dashedLine">
+                        <li>Return Value:	Returns an object representing the connection to the MySQL server</li>
+                        <li>Note mysql_connect(); is old, use mysqli_connect</li>
+                      </ul>
+
+                    <li>The mysqli_select_db() function is used to change the default database for the connection.</li>
+                    <li>mysqli_select_db(connection,dbname);</li>
+                      <ul>
+                        <li>connection	Required. Specifies the MySQL connection to use</li>
+                        <li>dbname	Required. Specifies the default database to be used</li>
+                        <hr class="dashedLine">
+                        <li>Return Value:	TRUE on success. FALSE on failure</li>
                       </ul>
                   </ol>
               </li>

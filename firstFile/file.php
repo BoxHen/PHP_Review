@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 // function hit_count(){
 //   $handle = fopen('count.txt', 'r');

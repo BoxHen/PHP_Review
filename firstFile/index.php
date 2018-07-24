@@ -1,8 +1,20 @@
 <?php
 require 'file.php';
 
-echo 'OK';
+$user_ip = $_SERVER['REMOTE_ADDR'];
 
+function ip_exists($ip){
+  global $user_ip;
+  echo $user_ip;
+}
+
+function update_counter(){
+  $mysql_conn = @mysqli_connect($mysql_host, $mysql_user, $mysql_pass);
+  $query = "SELECT `count` FROM `hit_count`";
+  $query_run = mysqli_query($mysql_conn, $query);
+}
+
+update_counter();
 /*
 NOTES:
 	-"$":

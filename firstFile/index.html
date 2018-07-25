@@ -1080,6 +1080,34 @@
                       <li>Return Value:	Returns the number of rows in the result set or 0 or NULL if nothing found</li>
                     </ul>
                     <img class="image" src="images/queryDropDownList.PNG" alt="queryDropDownList">
+
+                  <hr class="dashedLine">
+                  <li>A good way to check for error from last connection is to use mysqli_connect_errno. The mysqli_connect_errno() function returns the
+                    error code from the last connection error, if any.</li>
+                  <li>mysqli_connect_errno(); OR $mysqli->connect_error; for Object Oriented Style </li>
+                    <ul>
+                      <li>Return Value:	Returns an error code value. Zero if no error occurred. We can use an if statement with this to check (0 is false)</li>
+                    </ul>
+                  </ol>
+              </li>
+              <!-- ============================================================================================= --> <hr>
+              <li> <a id="OOPJump"></a>
+                OOP in PHP: <br>
+                  <ol>
+                    <li>A class, for example, is like a blueprint for a house. It defines the shape of the house on paper, with relationships between the
+                      different parts of the house clearly defined and planned out, even though the house doesn't exist.</li>
+                    <li>An object, then, is like the actual house built according to that blueprint. The data stored in the object is like the wood, wires,
+                      and concrete that compose the house: without being assembled according to the blueprint, it's just a pile of stuff. However, when it
+                      all comes together, it becomes an organized, useful house.</li>
+                    <li>Classes form the structure of data and actions and use that information to build objects. More than one object can be built from
+                      the same class at the same time, each one independent of the others. Continuing with our construction analogy, it's similar to the
+                      way an entire subdivision can be built from the same blueprint: 150 different houses that all look the same but have different
+                      families and decorations inside.</li>
+                    <li>to create a class, we can declare it by using the "class" keyword followed by the name with a {}</li>
+                    <img class="image" src="images/class.PNG" alt="Create a class">
+                    <li>we can instantiate the class with the "new" keyword ($object1 = new MyClass)</li>
+                    <li>To see the contents of the class we can use var_dump();</li>
+                    <img class="image" src="images/var_dump.PNG" alt="var_dump">
                   </ol>
               </li>
               <!-- ============================================================================================= --> <hr>

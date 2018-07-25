@@ -9,9 +9,11 @@ function ip_exists($ip){
 }
 
 function update_counter(){
-  $mysql_conn = @mysqli_connect($mysql_host, $mysql_user, $mysql_pass);
+  global $mysql_conn;
   $query = "SELECT `count` FROM `hit_count`";
-  $query_run = mysqli_query($mysql_conn, $query);
+  if($query_run = mysqli_query($mysql_conn, $query) ){
+
+  }
 }
 
 update_counter();

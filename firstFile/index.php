@@ -1,18 +1,34 @@
 <?php
-require 'file.php';
+$conn_error = 'Could Not Connect';
 
+$mysql_host = 'localhost';
+$mysql_user = 'root';
+$mysql_pass = '';
+$mysql_db = 'test'; // database name
+// create the connection
+$conn = new mysqli($mysql_host, $mysql_user, $mysql_pass,$mysql_db);
+// check the connection
+if($conn->connect_error){
+  die($conn_error);
+}
+// get user ip address
 $user_ip = $_SERVER['REMOTE_ADDR'];
-
+// checks if user ip address is registered
 function ip_exists($ip){
   global $user_ip;
   echo $user_ip;
 }
-
+// update the hit counter if user ip address not listed
 function update_counter(){
-  global $mysql_conn;
-  $query = "SELECT `count` FROM `hit_count`";
-  if($query_run = mysqli_query($mysql_conn, $query) ){
+  global $conn;
+  $sql = "SELECT `count` FROM `hit_count`"; // the query to run
+  $result = $conn->query($sql); // runs the query
 
+  if($result->num_rows > 0){ // checks the number of rows in a result set.
+
+    while($row = $result->fetch_assoc()){ // fetches a result row as an associative array.
+      echo $row["count"];
+    }
   }
 }
 

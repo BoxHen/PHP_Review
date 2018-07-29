@@ -10,8 +10,12 @@ if(isset($_POST['name_box'])) {
       echo 'Query failed';
       return false;
     }
-    if($result->num_rows > 0){
-      echo 'found';
+    $resultsFound = $result->num_rows;
+    if($resultsFound > 0){
+      echo $resultsFound.' results found.'.'<br>';
+      while($row = $result->fetch_assoc()){
+        echo $row['name'].'<br>';
+      }
     }else{
       echo 'no results';
     }

@@ -1,12 +1,26 @@
 <?php
-if(isset($_POST['name-box'])) {
+require 'file.php';
 
+if(isset($_POST['name_box'])) {
+  $search_field = $_POST['name_box'];
+  if(!empty($search_field)){
+    $sql = "SELECT name FROM namelist WHERE name LIKE '%".$search_field."%'";
+    $result = $conn->query($sql);
+    if($result === false){
+      echo 'Query failed';
+      return false;
+    }
+    if($result->num_rows > 0){
+      echo 'found';
+    }else{
+      echo 'no results';
+    }
+  }
 }
 ?>
 <form action="index.php" method="POST">
- Name: <input type="text" name="name-box"> <input type="submit" name="submit-button" value="Search"
+  Name: <input type="text" name="name_box"> <input type="submit" name="submit_button" value="Search">
 </form>
-
 <?php
 /*
 NOTES:

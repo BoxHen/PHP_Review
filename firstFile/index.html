@@ -1142,6 +1142,13 @@
                       <ul>
                         <img class="image" src="images/LIKE.PNG" alt="LIKE Clause">
                       </ul>
+                    <li>The mysqli_real_escape_string() function escapes special characters in a string for use in an SQL statement.</li>
+                    <li>mysqli_real_escape_string(connection,escapestring);</li>
+                      <ul>
+                        <li>connection:   Required. Specifies the MySQL connection to use</li>
+                        <li>escapestring: Required. The string to be escaped. Characters encoded are NUL (ASCII 0), \n, \r, \, ', ", and Control-Z.</li>
+                      </ul>
+                    <li>useful for avoiding users trying to pass special characters into fields for submit.</li>
                   </ol>
               </li>
               <!-- ============================================================================================= --> <hr>

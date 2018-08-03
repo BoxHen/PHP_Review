@@ -1,5 +1,5 @@
 <?php
-require 'file.php';
+require 'connect.php';
 
 if(isset($_POST['name_box'])) {
   $search_field = $_POST['name_box'];

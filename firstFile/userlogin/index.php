@@ -1,9 +1,13 @@
 <?php
   require 'core.php';
-  require 'loginform.php';
   require 'connect.php';
 
-  //echo $current_file; 
+  //echo $current_file;
+  if(isset($_SESSION['user_id'])&&!empty($_SESSION['user_id'])){
+    echo 'you are logged in';
+  }else{
+    include 'loginform.php';
+  }
 ?>
 <?php
 /*

@@ -1,8 +1,9 @@
 <?php
   require 'core.php';
-  //$current_file = $_SERVER['SCRIPT_NAME'];
+  require 'loginform.php';
+  require 'connect.php';
 
-  echo $current_file;
+  //echo $current_file; 
 ?>
 <?php
 /*

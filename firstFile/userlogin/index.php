@@ -4,7 +4,7 @@
 
   //echo $current_file;
   if(isset($_SESSION['user_id'])&&!empty($_SESSION['user_id'])){
-    echo 'you are logged in';
+    echo 'you are logged in .<a href="logout.php">Log Out</a>';
   }else{
     include 'loginform.php';
   }

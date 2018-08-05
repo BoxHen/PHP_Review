@@ -1152,13 +1152,15 @@
                   </ol>
               </li>
               <!-- ============================================================================================= --> <hr>
-	             <li> <a id="LikeJump"></a>
-                Using LIKE in SQL: <br>
+	             <li> <a id="HTTP_REFERERJump"></a>
+                Using HTTP_REFERER: <br>
                   <ol>
-                    <li>The SELECT DISTINCT statement is used to return only unique values inside a table/li>
-                      <ul>
-		                    <li>in a column, duplicate values may exist and we can uses SELECT DISTINCT to obtain unique values</li>
-	                    </ul>
+                    <li>HTTP_REFERER is not guaranteed to be sent by the client:</li>
+                    <li>Thus it is not reliable to use: The address of the page (if any) which referred the user agent to the current page.
+                      This is set by the user agent. Not all user agents will set this, and some provide the ability to modify HTTP_REFERER
+                      as a feature. In short, it cannot really be trusted. </li>
+                    <li>we can try this to use it ...</li>
+                    <img class="image" src="images/HTTP_REFERER.PNG" alt="HTTP_REFERER">
                   </ol>
               </li>
               <!-- ============================================================================================= --> <hr>

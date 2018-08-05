@@ -3,8 +3,9 @@
   require 'connect.php';
 
   //echo $current_file;
-  if(isset($_SESSION['user_id'])&&!empty($_SESSION['user_id'])){
+  if(loggedin()){
     echo 'you are logged in .<a href="logout.php">Log Out</a>';
+    echo getfield('first name');
   }else{
     include 'loginform.php';
   }

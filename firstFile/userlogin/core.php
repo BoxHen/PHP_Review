@@ -1,8 +1,28 @@
 <?php
   ob_start();
   session_start();
+  //require 'connect.php';
   $current_file = $_SERVER['SCRIPT_NAME'];
   //$http_referer = $_SERVER['HTTP_REFERER'];
+
+  function loggedin(){
+    if(isset($_SESSION['user_id'])&&!empty($_SESSION['user_id'])){
+      return true;
+    }else{
+      return false;
+    }
+  }
+
+  function getfield($field){
+    require 'connect.php';
+    $sql = "SELECT `$field` FROM `users` WHERE `id`='".$_SESSION['user_id']."'";
+    $result = $conn->query($sql);
+    if($result->num_rows > 0){
+      while($row = $result->fetch_assoc()){
+        return $row[$field];
+      }
+    }
+  }
 
   /*
 ~~~What is a PHP Session?~~~

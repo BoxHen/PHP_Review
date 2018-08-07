@@ -4,8 +4,9 @@
 
   //echo $current_file;
   if(loggedin()){
-    echo 'you are logged in .<a href="logout.php">Log Out</a>';
-    echo getfield('first name');
+    $firstname = getfield('first name');
+    $lastname = getfield('last name');
+    echo 'you are logged in, '.$firstname.' '.$lastname.'.<a href="logout.php">Log Out</a>';
   }else{
     include 'loginform.php';
   }

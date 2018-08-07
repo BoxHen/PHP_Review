@@ -16,10 +16,11 @@
   function getfield($field){
     require 'connect.php';
     $sql = "SELECT `$field` FROM `users` WHERE `id`='".$_SESSION['user_id']."'";
-    $result = $conn->query($sql);
-    if($result->num_rows > 0){
-      while($row = $result->fetch_assoc()){
-        return $row[$field];
+    if($result = $conn->query($sql)){ // if invalid, $esult will be false
+      if($result->num_rows == 1){
+        while($row = $result->fetch_assoc()){
+          return $row[$field];
+        }
       }
     }
   }

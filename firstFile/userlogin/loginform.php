@@ -6,7 +6,7 @@ if(isset($_POST['Username'])&&isset($_POST['password'])){
   $password_hashed=md5($password);
 
   if(!empty($username)&&!empty($password)){
-    $sql="SELECT * FROM `users` WHERE `username`='$username' AND `password`='$password_hashed'";
+    $sql="SELECT * FROM `users` WHERE `username`='".mysqli_real_escape_string($conn, $username)."' AND `password`='".mysqli_real_escape_string($conn, $password_hashed)."'";
     //$sql="SELECT * FROM `users`";
     $result=$conn->query($sql);
     if($result->num_rows == 1){

@@ -38,11 +38,11 @@
 ?>
 
 <form action="register.php" method="POST">
-  Username:<br> <input type="text" name="username"><br>
+  Username:<br> <input type="text" name="username" value="<?php if(isset($username)){echo $username;}?>"><br>
   Password:<br> <input type="password" name="password"><br>
   Re-enter Password:<br> <input type="password" name="password2"><br>
-  First Name:<br> <input type="text" name="firstname"><br>
-  Last Name:<br> <input type="text" name="lastname"><br><br>
+  First Name:<br> <input type="text" name="firstname" value="<?php if(isset($username)){echo $firstname;}?>"><br>
+  Last Name:<br> <input type="text" name="lastname" value="<?php if(isset($username)){echo $lastname;}?>"><br><br>
   <input type="submit" name="submit" value="Submit"><br>
 </form>
 

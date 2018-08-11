@@ -1164,6 +1164,23 @@
                   </ol>
               </li>
               <!-- ============================================================================================= --> <hr>
+              <li> <a id="SQLinjectionJump"></a>
+               SQL Injection: <br>
+                 <ol>
+                   <li>SQL Injection(SQLi) is an attack where malicious SQL statements are executed. This can allow the attacker to gain
+                     access to private information and gain unauthorized access to databases an more.</li>
+                    <li>An easy way for SQLi attacks is the insertion of quotes into fields such as " ' OR ''=' "</li>
+                    <li>To prevent this we can</li>
+                      <ul>
+                        <li>Go into the ini file and turn on magic_quotes_gpc</li>
+                        <img class="image" src="images/SQLi_1.PNG" alt="ini file SQLi">
+                        <li>We can also use mysqli_real_escape_string();</li>
+                        <li>in certain cases we can change the num_rows from >=1 to == 1. This works since we should only have one return
+                          since usernames should not be duplicated. </li>
+                      </ul>
+                 </ol>
+             </li>
+             <!-- ============================================================================================= --> <hr>
             </ul>
           </p>
         </section>

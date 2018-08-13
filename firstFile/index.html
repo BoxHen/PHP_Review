@@ -1187,8 +1187,57 @@
                   <li>GD library is a graphics drawing library which provides tools for manipulating image data.</li>
                   <li>This is useful in cases such as:</li>
                   <ul>
-                    <li>adds added security with images so bots cannot mass register or collect data. Adding an elongated image and asking 
+                    <li>adds added security with images so bots cannot mass register or collect data. Adding an elongated image and asking
                       the user to input the text into another field.</li>
+                  </ul>
+
+                  <hr class="dashedLine">
+                  <li>we can use GD library to protect emails by changing string to image</li>
+                  <ul>Functions:
+                    <li>ImageFontHeight(font) - Returns the pixel height of a character in the specified font. Can be 1, 2, 3, 4, 5 for built-in
+                      fonts in latin2 encoding (where higher numbers corresponding to larger fonts) or any of your own font identifiers
+                      registered with imageloadfont().</li>
+                    <li>ImageFontWidth(font) - Returns the pixel width of a character in font. Can be 1, 2, 3, 4, 5 for built-in fonts in latin2
+                      encoding (where higher numbers corresponding to larger fonts) or any of your own font identifiers registered with
+                      imageloadfont().</li>
+                    <li>imagecreate(width, height) - returns an image identifier representing a blank image of specified size.</li>
+                      <ul>
+                        <li>width: The image width.</li>
+                        <li>height: The image height.</li>
+                        <li>note:In general, we recommend the use of imagecreatetruecolor() instead of imagecreate() so that image processing
+                          occurs on the highest quality image possible. If you want to output a palette image, then imagetruecolortopalette()
+                          should be called immediately before saving the image with imagepng() or imagegif().</li>
+                        <li>Returns an image resource identifier on success, FALSE on errors.</li>
+                      </ul>
+                    <li>imagecolorallocate(image, red, green, blue) - Returns a color identifier representing the color composed of the given RGB components.
+                      imagecolorallocate() must be called to create each color that is to be used in the image represented by image.
+                      The first call to imagecolorallocate() fills the background color in palette-based images - images created using imagecreate().</li>
+                      <ul>
+                        <li>image: An image resource, returned by one of the image creation functions, such as imagecreatetruecolor().</li>
+                        <li>red: Value of red component.</li>
+                        <li>green: Value of green component.</li>
+                        <li>blue: Value of blue component.</li>
+                        <li>Returns a color identifier or FALSE if the allocation failed.</li>
+                      </ul>
+                    <li>imagestring(image, font, x, y, string, color) - Draws a string at the given coordinates.</li>
+                      <ul>
+                        <li>image: An image resource, returned by one of the image creation functions, such as imagecreatetruecolor().</li>
+                        <li>font: Can be 1, 2, 3, 4, 5 for built-in fonts in latin2 encoding (where higher numbers corresponding to larger fonts) or any of your own font identifiers registered with imageloadfont().</li>
+                        <li>x: x-coordinate of the upper left corner.</li>
+                        <li>y: y-coordinate of the upper left corner.</li>
+                        <li>string: The string to be written.</li>
+                        <li>color: A color identifier created with imagecolorallocate().</li>
+                        <li>Returns TRUE on success or FALSE on failure.</li>
+                      </ul>
+                    <li>imagejpeg(image[,to [,quality ]]) - imagejpeg() creates a JPEG file from the given image.</li>
+                      <ul>
+                        <li>image: An image resource, returned by one of the image creation functions, such as imagecreatetruecolor().</li>
+                        <li>to: The path or an open stream resource (which is automatically being closed after this function returns) to save the file to. If not set or NULL, the raw image stream will be outputted directly.
+                          To skip this argument in order to provide the quality parameter, use NULL.</li>
+                        <li>quality: quality is optional, and ranges from 0 (worst quality, smaller file) to 100 (best quality, biggest file). The default is the default IJG quality value (about 75).</li>
+                        <li>Returns TRUE on success or FALSE on failure.</li>
+                      </ul>
+                    <img class="image" src="images/EmailStringtoImg.PNG" alt="string to image">
                   </ul>
                 </ol>
             </li>

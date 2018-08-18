@@ -1251,6 +1251,11 @@
                         <li>image: An image resource, returned by one of the image creation functions, such as imagecreatetruecolor().</li>
                         <li>Return the width of the image or FALSE on errors.</li>
                       </ul>
+                    <li>imagesy(image) - Returns the height of the given image resource.</li>
+                      <ul>
+                        <li>image: An image resource, returned by one of the image creation functions, such as imagecreatetruecolor().</li>
+                        <li>Return the height of the image or FALSE on errors.</li>
+                      </ul>
                     <li>imagecreatetruecolor(width, height) - returns an image identifier representing a black image of the specified size.</li>
                       <ul>
                         <li>width:  Image width.</li>
@@ -1265,6 +1270,7 @@
                     <li>getimagesize(filename [,imageinfo ]) - function will determine the size of any supported given image file and return the
                       dimensions along with the file type and a height/width text string to be used inside a normal HTML IMG tag and the
                       correspondent HTTP content type.</li>
+                      <li>not a GD function so we can use this elsewhere </li>
                       <ul>
                         <li>filename: This parameter specifies the file you wish to retrieve information about. It can reference a local file or
                           (configuration permitting) a remote file using one of the supported streams.</li>

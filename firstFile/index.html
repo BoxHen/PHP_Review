@@ -1280,6 +1280,24 @@
                           iptcparse() function to parse the binary APP13 marker into something readable.</li>
                         <li>Returns an array with up to 7 elements. Not all image types will include the channels and bits elements.</li>
                       </ul>
+                    <li>imagecopymerge(dst_im, src_im, dst_x, dst_y, src_x, src_y, src_w, src_h, pct) — Copy and merge part of an image
+                      Copy a part of src_im onto dst_im starting at the x,y coordinates src_x, src_y with a width of src_w and a height
+                      of src_h. The portion defined will be copied onto the x,y coordinates, dst_x and dst_y.</li>
+                      <ul>
+                        <li>dst_im: Destination image link resource. </li>
+                        <li>src_im: Source image link resource.</li>
+                        <li>dst_x: x-coordinate of destination point.</li>
+                        <li>dst_y: y-coordinate of destination point.</li>
+                        <li>src_x: x-coordinate of source point.</li>
+                        <li>src_y: y-coordinate of source point.</li>
+                        <li>src_w: Source width.</li>
+                        <li>src_h: Source height.</li>
+                        <li>pct: The two images will be merged according to pct which can range from 0 to 100. When pct = 0, no action is taken, when 100 this function
+                          behaves identically to imagecopy() for pallete images, except for ignoring alpha components, while it implements alpha transparency for true
+                          colour images.</li>
+                      </ul>
+
+
                   </ul>
                 </ol>
             </li>

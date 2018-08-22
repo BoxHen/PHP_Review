@@ -1,5 +1,6 @@
 <?php
-header('Content-type: image/jpeg');
+session_start();
+//header('Content-type: image/jpeg');
 
 $text = $_SESSION['secure'];
 $font_size = 30; // set captcha font
@@ -10,8 +11,8 @@ $image_height = 40;
 $image = imagecreate($image_width, $image_height);
 imagecolorallocate($image, 255, 255, 255); // allocate white to be used
 $text_color = imagecolorallocate($image, 0, 0, 0); //allocate black as color for text
-
-imagegetftext($image, $font_size, 0, 15, 30, $text_color, 'font.ttf', $text);
+$font = dirname("/C:/Windows/Fonts").'arial.ttf';//../Windows/Fonts/
+imagettftext($image, $font_size, 0, 15, 30, $text_color, $font, $text);
 imagejpeg($image); // get to browser
-}
+
  ?>

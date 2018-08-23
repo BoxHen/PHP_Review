@@ -1299,7 +1299,39 @@
 
                     <hr class="dashedLine">
                     Captcha Image Security
-                    
+                    <li>imageline(image, x1, y1, x2, y2, color) - Draws a line between the two given points.</li>
+                      <ul>
+                        <li>image: An image resource, returned by one of the image creation functions, such as imagecreatetruecolor().</li>
+                        <li>x1: x-coordinate for first point.</li>
+                        <li>y1: y-coordinate for first point.</li>
+                        <li>x2: x-coordinate for second point.</li>
+                        <li>y2: y-coordinate for second point.</li>
+                        <li>color: The line color. A color identifier created with imagecolorallocate().</li>
+                        <li>Returns TRUE on success or FALSE on failure.</li>
+                      </ul>
+                    <li>imagettftext(image, size, angle, x, y, color, fontfile, text) - Writes the given text into the image using TrueType fonts
+                      (imagefttext() is an extended variant of imagettftext() which additionally supports the extrainfo.).</li>
+                      <ul>
+                        <li>image: An image resource, returned by one of the image creation functions, such as imagecreatetruecolor().</li>
+                        <li>size: The font size in points.</li>
+                        <li>angle: The angle in degrees, with 0 degrees being left-to-right reading text. Higher values represent a counter-clockwise rotation. For example,
+                          a value of 90 would result in bottom-to-top reading text.</li>
+                        <li>x: The coordinates given by x and y will define the basepoint of the first character (roughly the lower-left corner of the character). This is
+                          different from the imagestring(), where x and y define the upper-left corner of the first character. For example, "top left" is 0, 0.</li>
+                        <li>y: The y-ordinate. This sets the position of the fonts baseline, not the very bottom of the character.</li>
+                        <li>color: The color index. Using the negative of a color index has the effect of turning off antialiasing. See imagecolorallocate().</li>
+                        <li>fontfile: The path to the TrueType font you wish to use. In many cases where a font resides in the same directory as the script using it the following trick will alleviate any include problems.
+                          <img class="image" src="images/imagettftext.PNG" alt="imagettftext"> </li>
+                        <li>text: The text string in UTF-8 encoding. May include decimal numeric character references (of the form: &#8364;) to access characters in a font
+                          beyond position 127. The hexadecimal format (like &#xA9;) is supported. Strings in UTF-8 encoding can be passed directly. Named entities, such as
+                          &copy;, are not supported. Consider using html_entity_decode() to decode these named entities into UTF-8 strings. If a character is used in the
+                          string which is not supported by the font, a hollow rectangle will replace the character.</li>
+                        <li>Returns an array with 8 elements representing four points making the bounding box of the text. The order of the points is lower left, lower
+                          right, upper right, upper left. The points are relative to the text regardless of the angle, so "upper left" means in the top left-hand corner
+                          when you see the text horizontally. Returns FALSE on error.</li>
+                      </ul>
+
+
 
 
                   </ul>

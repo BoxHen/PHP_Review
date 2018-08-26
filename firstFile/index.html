@@ -1331,6 +1331,28 @@
                           when you see the text horizontally. Returns FALSE on error.</li>
                       </ul>
 
+                    <hr class="dashedLine">
+                    Thumbnail Resize
+                    <li>imagecopyresized(dst_image, src_image, dst_x, dst_y, src_x, src_y, dst_w, dst_h, src_w, src_h) -  copies a rectangular portion of one image to another image. dst_image
+                      is the destination image, src_image is the source image identifier. In other words, imagecopyresized() will take a rectangular area from src_image of width src_w and
+                      height src_h at position (src_x,src_y) and place it in a rectangular area of dst_image of width dst_w and height dst_h at position (dst_x,dst_y). If the source and
+                      destination coordinates and width and heights differ, appropriate stretching or shrinking of the image fragment will be performed. The coordinates refer to the upper
+                      left corner. This function can be used to copy regions within the same image (if dst_image is the same as src_image) but if the regions overlap the results will be
+                      unpredictable.</li>
+                      <ul>
+                        <li>dst_image: Destination image link resource.</li>
+                        <li>src_imageSource image link resource.</li>
+                        <li>dst_x: x-coordinate of destination point.</li>
+                        <li>dst_y: y-coordinate of destination point.</li>
+                        <li>src_x: x-coordinate of source point.</li>
+                        <li>src_y: y-coordinate of source point.</li>
+                        <li>dst_w: Destination width.</li>
+                        <li>dst_h: Destination height.</li>
+                        <li>src_w: Source width.</li>
+                        <li>src_h: Source height.</li>
+                        <li>Returns TRUE on success or FALSE on failure.</li>
+                      </ul>
+
 
 
 

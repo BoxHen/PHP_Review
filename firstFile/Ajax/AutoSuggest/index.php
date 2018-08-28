@@ -15,7 +15,8 @@
           }
         }
 
-        xmlhttp.open('GET', 'suggest.php', true);
+        xmlhttp.open('GET', 'suggest.php?search_text='+document.search.searchbar.value, true);
+        // passes into the $_GET the searcbar value
         xmlhttp.send();
       }
     </script>
@@ -23,7 +24,7 @@
   <body>
     <form id="search" name="search">
       Type: <br>
-      <input type="text" name="keyword" value="" onkeydown="findmatch();">
+      <input type="text" name="searchbar" value="" onkeyup="findmatch();">
     </form>
 
     <div id="results"></div>

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <script type="text/javascript">
-      function findmatch(){
+      function insert(){
         if(window.XMLHttpRequest){
           xmlhttp = new XMLHttpRequest();
         }else{
@@ -15,9 +15,9 @@
           }
         }
 
-        parameter = ''
         xmlhttp.open('POST', 'suggest.php', true);
         xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+        parameter = 'text='+document.getElementById('text').value;
         xmlhttp.send(parameter);
       }
     </script>
@@ -25,7 +25,7 @@
   <body>
     <form id="search" name="search">
       Type: <br>
-      <input type="text" name="searchbar" value="" onkeyup="findmatch();">
+      <input type="text" id='text'> <input type="button" value="submit" onclick="insert()">
     </form>
 
     <div id="results"></div>

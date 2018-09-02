@@ -1384,7 +1384,18 @@
                     <li> <a id="Exceptionjump"></a>
                       Throwing an exception: <br>
                         <ol>
-                          <li></li>
+                          <li>Exception handling is used to change the normal flow of the code execution if a specified error (exceptional) condition occurs. This condition is called an exception.</li>
+                          <li>This is what normally happens when an exception is triggered:</li>
+                            <ul>
+                              <li>The current code state is saved</li>
+                              <li>The code execution will switch to a predefined (custom) exception handler function</li>
+                              <li>Depending on the situation, the handler may then resume the execution from the saved code state, terminate the script execution or continue the script from a different location in the code</li>
+                            </ul>
+                          <li>can be invoked with "throw new Exception('')"</li>
+                          <img class="iamge" src="images/exception.PNG" alt="Exception">
+                          <li>try - A function using an exception should be in a "try" block. If the exception does not trigger, the code will continue as normal. However if the exception triggers, an exception is "thrown"</li>
+                          <li>throw - This is how you trigger an exception. Each "throw" must have at least one "catch"</li>
+                          <li>catch - A "catch" block retrieves an exception and creates an object containing the exception information</li>
                         </ol>
                     </li>
 

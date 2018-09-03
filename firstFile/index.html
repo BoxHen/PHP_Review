@@ -1378,6 +1378,16 @@
                               <li>The response is read by JavaScript</li>
                               <li>Proper action (like page update) is performed by JavaScript</li>
                             </ol>
+                          <li>cross browser XML</li>
+                          <img class="image" src="images/crossXML.PNG" alt="Cross browser XML">
+                          <li>This code snippet creates a XMLHttpRequest object</li>
+                            <ul>
+                              <li>if (window.XMLHttpRequest): detects whether the browser has XMLHttpRequest functionality implemented as a global function
+                                (members of window object), if so the XMLHttpRequest object is constructed that way. Otherwise the code blindly assumes it
+                                can create the XMLHttpRequest by calling ActiveXObject functions, which is the way to create such an object in IE5 and IE6
+                                as noted. The last assumption might not be correct because the browser might not even have that functionality or it could
+                                be implemented in a different way. An exception could be raised on the last case.</li>
+                            </ul>
                         </ol>
                     </li>
                     <!-- ============================================================================================= --> <hr>

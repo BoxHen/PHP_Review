@@ -1406,6 +1406,11 @@
                           <li>try - A function using an exception should be in a "try" block. If the exception does not trigger, the code will continue as normal. However if the exception triggers, an exception is "thrown"</li>
                           <li>throw - This is how you trigger an exception. Each "throw" must have at least one "catch"</li>
                           <li>catch - A "catch" block retrieves an exception and creates an object containing the exception information</li>
+
+                          <hr class="dashedLine">
+                          Custom Exceptions
+                          <li>create a class such as myException which will extend from Exception. You can use then use "throw new myException('');" </li>
+                          <img class="image" src="images/CustomException.PNG" alt="CustomException">
                         </ol>
                     </li>
 
